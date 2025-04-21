@@ -42,8 +42,8 @@ void State_VertLine(State *state,int x,int y,int height,Uint32 color){
     }
 }
 void State_Square(State *state,int x,int y,int size,Uint32 color){
-    if(x < 0 || x + size > SCREEN_WIDTH || y < 0 || y + size > SCREEN_HEIGHT){
-        printf("Square out of Bounds of Screen\n");
+    if(x < 0 || x + size - 1 > SCREEN_WIDTH || y < 0 || y + size - 1 > SCREEN_HEIGHT){
+        //printf("Square out of Bounds of Screen\n");
         return;
     }
     for(int i = 0; i < size; i++){
